@@ -11,6 +11,7 @@
 
 ## Instalation
 
+
 Download this repository and add it in your project path
 it should be as follows
 
@@ -41,7 +42,7 @@ Refresh your browser and go to the back office of your store.
 ![result](doc/menu.png)
 
 ### Modules
-
+-------------------------
 #### Weather Widget
 
 This module allows you to add a weather widget based on the location of the visitor.
@@ -61,6 +62,7 @@ Here you will find the necessary settings to enable and customize this module.
 After installing and enabling the module, the result is displayed as in the following image
 ![result](Weather/doc/img/frontend.png)
 
+-------------------------
 #### Spent Summary
 
 This module is responsible for calculating the total amount spent by a user according to their email.
@@ -88,6 +90,7 @@ After installing and enabling the module, the result is displayed as in the foll
 ![result](SpentSummary/doc/img/frontend.png)
 ![result](SpentSummary/doc/img/email.png)
 
+-------------------------
 #### Product Widget
 
 This module adds a small widget to your store's PDP, where you can enter a small message and customize it as required.
