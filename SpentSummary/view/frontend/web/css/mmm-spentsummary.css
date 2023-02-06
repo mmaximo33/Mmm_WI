@@ -1,0 +1,27 @@
+.mmm-spentsummary {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.mmm-spentsummary div {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mmm-spentsummary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mmm-spentsummary li {
+    width: 50%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}

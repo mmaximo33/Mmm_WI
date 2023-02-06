@@ -1,0 +1,17 @@
+<?php
+// ToDo: Find alternative, objectManagement not officially recommended
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$config = $objectManager->create(\Mmm\ProductWidget\Model\Configuration\Config::class);
+$settingStyles = ($config->getStyles() === null) ? '' : $config->getStyles();
+
+$content = $block->getProduct()->getData('mmm_product_widget');
+?> 
+<?= $settingStyles ?>
+<? if ($content) { ?>
+    <div class="mmm-productwidget-box">
+        <p class="mmm-productwidget-text">
+            <?= $content ?>
+        </p>
+    </div> 
+<?php } ?>
+

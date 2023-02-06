@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Mmm_Weather::css/mmm-weather.css" />
+    </head>
+    <referenceContainer name="header.container">
+        <block name="mmm.weather.widget" ifconfig="mmm_weather/settings/enable"
+            class="Mmm\Weather\Block\Weather" template="Mmm_Weather::weather.phtml"
+            before="-" />
+    </referenceContainer>
+</page>

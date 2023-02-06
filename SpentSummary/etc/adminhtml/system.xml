@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="mmm_spentsummary" translate="label" sortOrder="1" showInDefault="1"
+            showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Spent Summary</label>
+            <tab>mmm</tab>
+            <resource>Mmm_SpentSummary::settings</resource>
+            <group id="settings" translate="label comment" type="text" sortOrder="1"
+                showInDefault="1"
+                showInWebsite="0" showInStore="0">
+                <label>Settings</label>
+                <comment><![CDATA[<strong style="color:red">Warning!</strong><br/>
+                    To see the changes made to the frontend of your site. remember to
+                    <ul>
+                        <li>Cache flush <b>full_page</b></li>
+                        <li>Menu > System > Tools > Cache Management</li>
+                    </ul> ]]></comment>
+                <field id="enable" translate="label comment" type="select" sortOrder="1"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Feature Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="calculate" translate="label comment" type="select" sortOrder="1"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Calculate Type</label>
+                    <comment><![CDATA[<strong style="color:red">Warning!</strong> You can calculate the total spent by the customer in the following ways<br/>
+                        <ul>
+                            <li>Total invoice</li>
+                            <li>Total invoice - Total Creditmemo</li>
+                        </ul>]]></comment>
+                    <validate>required-entry</validate>
+                    <source_model>Mmm\SpentSummary\Model\Configuration\Source\TypeCalculation</source_model>
+                    <depends>
+                        <field id="mmm_spentsummary/settings/enable">1</field>
+                    </depends>
+                </field>
+                <field id="styles_frontend" translate="label comment" type="textarea" sortOrder="3"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Custom CSS (Frontend)</label>
+                    <comment><![CDATA[You can adjust the styles using the classes. example:<br>
+                    &lt;style&gt;<br/>
+                        .mmm-spentsummary { background-color: red }<br/> 
+                    &lt;/style&gt;]]></comment>
+                    <depends>
+                        <field id="mmm_spentsummary/settings/enable">1</field>
+                    </depends>
+                </field>
+                <field id="styles_email" translate="label comment" type="textarea" sortOrder="3"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Custom CSS (Email)</label>
+                    <comment><![CDATA[You can adjust the styles using the classes. example:<br>
+                    &lt;style&gt;<br/>
+                        .mmm-spentsummary { background-color: red }<br/> 
+                    &lt;/style&gt;]]></comment>
+                    <depends>
+                        <field id="mmm_spentsummary/settings/enable">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

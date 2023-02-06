@@ -1,0 +1,35 @@
+<?php
+$settingStyles = ($block->getStyles() === null) ? '' : $block->getStyles();
+$symbol = $block->getSymbolCurrency();
+$totalAmounts = $block->getCalculateTotals();
+?>
+
+<?= $settingStyles ?>
+<div id='mmm-spentsummary' class='mmm-spentsummary'>
+    <div>
+        <?= __('Detail amounts for account') ?>
+        (<?= $block->getEmailAddress() ?>)
+    </div>
+    <ul>
+        <li>
+            <?= __('totalOrders') ?>
+            <?= $symbol ?>
+            <?= $totalAmounts['totalOrders'] ?>
+        </li>
+        <li>
+            <?= __('totalInvoicedOrders') ?>
+            <?= $symbol ?>
+            <?= $totalAmounts['totalInvoicedOrders'] ?>
+        </li>
+        <li>
+            <?= __('totalCreditmemo') ?>
+            <?= $symbol ?>
+            <?= $totalAmounts['totalCreditmemo'] ?>
+        </li>
+        <li>
+            <?= __('totalSpent') ?>
+            <?= $symbol ?>
+            <?= $totalAmounts['totalSpent'] ?>
+        </li>
+    </ul>
+</div>

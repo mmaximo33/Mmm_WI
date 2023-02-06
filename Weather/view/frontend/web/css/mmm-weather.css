@@ -1,0 +1,42 @@
+#mmm-weather-widget {
+    position: static;
+    width: 100%;
+    text-align: center;
+    background-color: #6e716e;
+    color: #fff;
+    overflow: hidden;
+}
+
+#mmm-weather-widget ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    animation: mmm-marquesina 70s linear infinite;
+}
+
+@keyframes mmm-marquesina {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-0%);
+    }
+}
+
+#mmm-weather-widget li {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0 1px;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    padding-left: 1rem;
+    /* border-left: 1px solid; */
+}
+
+#mmm-weather-widget li div {
+    padding: 0 1rem
+}

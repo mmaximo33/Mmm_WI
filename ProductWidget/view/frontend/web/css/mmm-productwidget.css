@@ -1,0 +1,18 @@
+.mmm-productwidget-box {
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+}
+
+.mmm-productwidget-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    width: 100%;
+    white-space: normal;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<body>
+    <head>
+        <css src="Mmm_SpentSummary::css/mmm-spentsummary.css" />
+    </head>
+    <referenceContainer name="order.success.additional.info">
+        <block name="mm.spentsummary.totalspent" ifconfig="mmm_spentsummary/settings/enable"
+            class="Mmm\SpentSummary\Block\Order\OnePage\Success\TotalSpent" 
+            template="Mmm_SpentSummary::order/onepage/success/total_spent.phtml"
+            before="-" />
+    </referenceContainer>
+</body>  

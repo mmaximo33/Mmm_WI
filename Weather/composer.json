@@ -1,0 +1,30 @@
+{
+    "name": "mmm/weather",
+    "version": "1.0.0",
+    "license": "MIT",
+    "type": "magento2-module",
+    "homepage": "https://github.com/mmaximo33/",
+    "description": "MM Module - Weather Widget",
+    "keywords": [
+        "composer-installer",
+        "magento",
+        "weaters",
+        "Magento 2"
+    ],
+    "authors": [
+        {
+            "name": "Maximo Marucci"
+        }
+    ],
+    "require": {
+        "mmm/core": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mmm\\Weather\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

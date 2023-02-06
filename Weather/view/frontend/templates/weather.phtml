@@ -1,0 +1,38 @@
+<?php
+/** @var $block \Mmm\Weather\Block\Wheather */
+$settingStyles = ($block->getStyles() === null) ? '' : $block->getStyles();
+$settingSpeed = ($block->getSpeed() === null) ? '' : sprintf('style="animation: mmm-marquesina %ss linear infinite;"', $block->getSpeed());
+?>
+<?= $settingStyles ?>
+
+<div id="mmm-weather-widget" class="mmm-weather-widget">
+
+    <ul <?= $settingSpeed ?>>
+        <li id="mmm-weather-location" class="mmm-weather-location">
+            <div id="mmm-weather-message" class="mmm-weather-message"></div>
+            <div id="mmm-weather-point" class="mmm-weather-point"></div>
+        </li>
+        <li>
+            <?= __('temperature') ?>:<div id="mmm-weather-temperature" class="mmm-weather-temperature"></div>
+        </li>
+        <li>
+            <?= __('humidity') ?>:<div id="mmm-weather-humidity" class="mmm-weather-humidity"></div>
+        </li>
+        <li>
+            <?= __('apparent_temperature') ?>:<div id="mmm-weather-apparent_temperature"
+                class="mmm-weather-apparent_temperature"></div>
+        </li>
+        <li>
+            <?= __('windgusts') ?>:<div id="mmm-weather-windgusts" class="mmm-weather-windgusts"></div>
+        </li>
+    </ul>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "#mmm-weather-widget": {
+            "Mmm_Weather/js/weather-<?= $block->getProvider() ?>": {
+            }
+        }
+    }
+</script>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Mmm_Core::menu" title="MM Module"
+            module="Mmm_Core" sortOrder="30" resource="Magento_Backend::content" />
+        <add id="Mmm_Core::info"
+            title="More info"
+            module="Mmm_Core"
+            sortOrder="100"
+            action="mmm/info/index"
+            parent="Mmm_Core::menu"
+            resource="Mmm_Core::info" />
+    </menu>
+</config>

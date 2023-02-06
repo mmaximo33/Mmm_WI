@@ -1,0 +1,1 @@
+# MM Module - Weather Widget

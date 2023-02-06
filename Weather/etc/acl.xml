@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Mmm_Core::menu">
+                    <resource id="Mmm_Weather::settings" title="Weather" sortOrder="2" />
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

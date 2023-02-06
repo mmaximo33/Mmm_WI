@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Mmm_Weather::weather"
+            title="Weather Widget"
+            module="Mmm_Weather"
+            sortOrder="1"
+            action="adminhtml/system_config/edit/section/mmm_weather/"
+            parent="Mmm_Core::menu"
+            resource="Mmm_Weather::settings" />
+    </menu>
+</config>

@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="mmm_weather" translate="label" sortOrder="1" showInDefault="1"
+            showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Weather Widget</label>
+            <tab>mmm</tab>
+            <resource>Mmm_Weather::settings</resource>
+            <group id="settings" translate="label comment" type="text" sortOrder="1"
+                showInDefault="1"
+                showInWebsite="0" showInStore="0">
+                <label>Settings</label>
+                <comment><![CDATA[<strong style="color:red">Warning!</strong><br/>
+                    To see the changes made to the frontend of your site. remember to
+                    <ul>
+                        <li>Cache flush <b>full_page</b></li>
+                        <li>Menu > System > Tools > Cache Management</li>
+                    </ul> ]]></comment>
+                <field id="enable" translate="label comment" type="select" sortOrder="1"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Feature Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="speed" translate="label comment" type="text" sortOrder="2"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Speed</label>
+                    <comment><![CDATA[
+                        <ul>
+                            <li>Default the speed is set to <b>60</b></li>
+                            <li>Range [1-100]</li>
+                        </ul>]]></comment>
+                    <validate>validate-number range-speed</validate>
+                    <depends>
+                        <field id="mmm_weather/settings/enable">1</field>
+                    </depends>
+                </field>
+                <field id="styles" translate="label comment" type="textarea" sortOrder="3"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Custom CSS</label>
+                    <comment><![CDATA[You can adjust the styles using the classes. example:<br>
+                    &lt;style&gt;<br/>
+                        .mmm-weather-widget { background-color: red }<br/> 
+                        .mmm-weather-location {}<br/>
+                        .mmm-weather-message {}<br>
+                        .mmm-weather-point {}<br/>
+                    &lt;/style&gt;]]></comment>
+                    <depends>
+                        <field id="mmm_weather/settings/enable">1</field>
+                    </depends>
+                </field>
+                <field id="provider" translate="label comment" type="select" sortOrder="4"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Provider</label>
+                    <comment><![CDATA[We recommend <a href="open-meteo.com" target="_blank">open-meteo.com</a>, it is Free & OpenSource]]></comment>
+                    <validate>required-entry provider-select provider-in-construction</validate>
+                    <source_model>Mmm\Weather\Model\Configuration\Source\Providers</source_model>
+                    <depends>
+                        <field id="mmm_weather/settings/enable">1</field>
+                    </depends>
+                </field>
+                <field id="openmeteocom_opts" translate="label comment" type="multiselect"
+                    sortOrder="100"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Options Show</label>
+                    <comment><![CDATA[These data will be displayed in the homepage widget.]]></comment>
+                    <source_model>Mmm\Weather\Model\Configuration\Source\Options</source_model>
+                    <depends>
+                        <field id="mmm_weather/settings/enable">1</field>
+                        <field id="mmm_weather/settings/provider">openmeteocom</field>
+                    </depends>
+                </field>
+                <field id="apikey" translate="label comment" type="password"
+                    sortOrder="200"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>API key</label>
+                    <comment><![CDATA[To see the apikey of your account <a href="https://home.openweathermap.org/api_keys" target="_blank">click here</a>]]></comment>
+                    <validate>required-entry openweathermap-apikey</validate>
+                    <depends>
+                        <field id="mmm_weather/settings/enable">1</field>
+                        <field id="mmm_weather/settings/provider">openweathermaporg</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

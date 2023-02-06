@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Mmm_ProductWidget::css/mmm-productwidget.css" />
+    </head>
+    <body>
+        <referenceBlock name="product.info.main">
+            <block name="mm.productwidget.widget" ifconfig="mmm_productwidget/settings/enable"
+                class="Magento\Catalog\Block\Product\View\Description"
+                template="Mmm_ProductWidget::product/view/product_widget.phtml"
+                before="product.info.details"
+            />
+        </referenceBlock>
+    </body>
+</page>
