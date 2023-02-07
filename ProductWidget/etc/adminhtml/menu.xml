@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Mmm_ProductWidget::productwidget"
+        <add id="Mmm_ProductWidget::setting"
             title="Product Widget"
             module="Mmm_ProductWidget"
             sortOrder="1"
