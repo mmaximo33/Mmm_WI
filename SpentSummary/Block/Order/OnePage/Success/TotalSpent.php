@@ -7,7 +7,6 @@ use Mmm\SpentSummary\Model\Configuration\Config;
 use Mmm\SpentSummary\Model\Configuration\Currency;
 use Mmm\SpentSummary\Model\Order\CalculateTotalSpent;
 
-
 class TotalSpent extends \Magento\Framework\View\Element\Template
 {
 
@@ -24,8 +23,8 @@ class TotalSpent extends \Magento\Framework\View\Element\Template
     private $currency;
 
     /**
-     * Construct 
-     * 
+     * Construct
+     *
      * @param Context $context
      * @param Config $config
      * @param Session $checkoutSession
@@ -60,10 +59,10 @@ class TotalSpent extends \Magento\Framework\View\Element\Template
     }
 
      /**
-     * Symbol currency store
-     *
-     * @return string
-     */
+      * Symbol currency store
+      *
+      * @return string
+      */
     public function getSymbolCurrency()
     {
         return $this->currency->getSymbol();
@@ -95,4 +94,4 @@ class TotalSpent extends \Magento\Framework\View\Element\Template
         $totalAmounts = $this->calculateTotalSpent->calculateTotalAmounts($this->getEmailAddress());
         return $totalAmounts;
     }
-} 
+}

@@ -8,7 +8,6 @@ use Mmm\Weather\Model\Configuration\Config;
 /**
  * More info page
  *
- * @author      Marucci Maximo <marucci.maximo@gmail.com>
  */
 class Weather extends \Magento\Framework\View\Element\Template
 {
@@ -17,16 +16,16 @@ class Weather extends \Magento\Framework\View\Element\Template
 
     /**
      * Constructor
-     * 
+     *
      * @param Config $config
-     * @param Context 
+     * @param Context $context
+     * @param array $data
      */
     public function __construct(
         Config $config,
         Context $context,
         array $data = [],
-    )
-    {
+    ) {
         parent::__construct($context, $data);
         $this->config = $config;
     }

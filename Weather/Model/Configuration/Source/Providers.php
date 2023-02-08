@@ -14,15 +14,15 @@ class Providers implements OptionSourceInterface
 {
   /**
    * Options key, value
-   * 
+   *
    * @return array
    */
-  public function toOptionArray()
-  {
-    return [
-      ['value' => 'null', 'label' => __('-- Select Provider --  ')],
-      ['value' => 'openmeteocom', 'label' => __('open-meteo.com')],
-      ['value' => 'openweathermaporg', 'label' => __('openweathermap.org')],
-    ];
-  }
+    public function toOptionArray()
+    {
+        return [
+        ['value' => 'null', 'label' => __('-- Select Provider --  ')],
+        ['value' => 'openmeteocom', 'label' => __('open-meteo.com')],
+        ['value' => 'openweathermaporg', 'label' => __('openweathermap.org')],
+        ];
+    }
 }

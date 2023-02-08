@@ -15,12 +15,12 @@ class InfiniteScroll extends \Magento\Framework\View\Element\Template
     /** @var Config */
     private $configmodule;
 
-   /**
+    /**
      * Construct
-     * 
+     *
      * @param Context $context
      * @param StoreManagerInterface $storeManager
-     * @param Config $cfg
+     * @param Config $configmodule
      * @param array $data
      */
     public function __construct(
@@ -46,12 +46,7 @@ class InfiniteScroll extends \Magento\Framework\View\Element\Template
 
     /**
      * Get gif
-     * 
+     *
      * ToDo: Review to customize the GIF by uploading it from backoffice
      */
-    public function getImgGif()
-    {
-
-    }
-
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
         <mmm_infinitescroll>
             <settings>
@@ -13,7 +14,7 @@
                 <item>.product-item</item>
             </settings_behavior>
             <settings_frontend>
-                <loading_image/>
+                <loading_image />
                 <loading_text><![CDATA[<em>Looking for more items...</em>]]></loading_text>
                 <done_text><![CDATA[<em>All items were uploaded.</em>]]></done_text>
                 <load_more>3</load_more>

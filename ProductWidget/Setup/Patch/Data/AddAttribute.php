@@ -10,7 +10,7 @@ use Magento\Framework\Setup\Patch\PatchRevertableInterface;
 
 /**
  * Add CustomAttribute
- * 
+ *
  */
 class AddAttribute implements DataPatchInterface, PatchRevertableInterface
 {
@@ -21,30 +21,42 @@ class AddAttribute implements DataPatchInterface, PatchRevertableInterface
 
     /**
      * Construct
-     * 
+     *
      * @param ModuleDataSetupInterface $moduleDataSetup
      * @param EavSetupFactory $eavSetupFactory
      */
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
         EavSetupFactory $eavSetupFactory
-    )
-    {
+    ) {
         $this->moduleDataSetup = $moduleDataSetup;
         $this->eavSetupFactory = $eavSetupFactory;
     }
-
+    /**
+     * Summary of getDependencies
+     *
+     * @return array
+     */
     public static function getDependencies()
     {
         return [];
     }
 
+    /**
+     * Summary of getAliases
+     *
+     * @return array
+     */
     public function getAliases()
     {
         return [];
     }
 
-
+    /**
+     * Summary of revert
+     *
+     * @return void
+     */
     public function revert()
     {
         $this->moduleDataSetup->getConnection()->startSetup();
@@ -58,6 +70,11 @@ class AddAttribute implements DataPatchInterface, PatchRevertableInterface
         $this->moduleDataSetup->getConnection()->endSetup();
     }
 
+    /**
+     * Summary of apply
+     *
+     * @return void
+     */
     public function apply()
     {
         $this->moduleDataSetup->getConnection()->startSetup();

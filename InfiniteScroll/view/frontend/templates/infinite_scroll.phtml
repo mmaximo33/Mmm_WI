@@ -13,35 +13,36 @@ $loadMore = $settings['load_more'];
 $loadMoreText = $settings['load_more_text'];
 
 // ToDO: Review to customize the GIF by uploading it from backoffice
-$loadingImage = $this->getViewFileUrl('images/loader-1.gif');
+$loadingImage = $block->getViewFileUrl('images/loader-1.gif');
 ?>
 
+<?php // @codingStandardsIgnoreStart ?>
 <script type="text/javascript">
     require(['jquery', 'mmm/infinitescroll', 'catalogAddToCart'], function ($) {
         "use strict";
         $(document).ready(function () {
             $('body').addClass('infinitescroll');
             window.ias = $.ias({
-                container: "<?= $content; ?>",
-                item: "<?= $item; ?>",
-                pagination: "<?= $pagination; ?>",
-                next: "<?= $next; ?>",
-                delay: "<?= $delay; ?>",
+                container: "<?= /* @noEscape */$content; ?>",
+                item: "<?= /* @noEscape */$item; ?>",
+                pagination: "<?= /* @noEscape */$pagination; ?>",
+                next: "<?= /* @noEscape */$next; ?>",
+                delay: "<?= /* @noEscape */$delay; ?>",
             });
             window.ias.extension(new IASSpinnerExtension({
-                src: "<?= $loadingImage; ?>",
-                html: '<div class="iass-spinner"><img src="{src}"/><span><?= $loadingText; ?></span></div>'
+                src: "<?= /* @noEscape */$loadingImage; ?>",
+                html: '<div class="iass-spinner"><img src="{src}"/><span><?= /* @noEscape */$loadingText; ?></span></div>'
             }));
             window.ias.extension(new IASNoneLeftExtension({
-                text: "<?= $doneText; ?>",
+                text: "<?= /* @noEscape */$doneText; ?>",
                 html: '<div class="ias-noneleft">{text}</div>'
             }));
             window.ias.extension(new IASTriggerExtension({
-                text: "<?= $loadMoreText ?>",
-                html: '<div class="ias-trigger ias-trigger-next"><button class="load-more"><?= $loadMoreText ?></button></div>',
-                textPrev: "<?= $loadMoreText ?>",
-                htmlPrev: '<div class="ias-trigger ias-trigger-prev"><button class="load-more"><?= $loadMoreText ?></button></div>',
-                offset: "<?= $loadMore ?>",
+                text: "<?= /* @noEscape */$loadMoreText ?>",
+                html: '<div class="ias-trigger ias-trigger-next"><button class="load-more"><?= /* @noEscape */$loadMoreText ?></button></div>',
+                textPrev: "<?= /* @noEscape */$loadMoreText ?>",
+                htmlPrev: '<div class="ias-trigger ias-trigger-prev"><button class="load-more"><?= /* @noEscape */$loadMoreText ?></button></div>',
+                offset: "<?= /* @noEscape */$loadMore ?>",
             }));
             window.ias.on('rendered', function (items) {
                 $('body').trigger('contentUpdated');
@@ -50,3 +51,4 @@ $loadingImage = $this->getViewFileUrl('images/loader-1.gif');
         });
     });
 </script>
+<?php // @codingStandardsIgnoreEnd ?>

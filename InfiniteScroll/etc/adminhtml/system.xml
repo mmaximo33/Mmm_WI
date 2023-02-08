@@ -92,7 +92,7 @@
                 </depends>
             </group>
             <group id="settings_frontend" translate="label comment" type="text" sortOrder="2"
-            showInDefault="1" showInWebsite="0" showInStore="0">
+                showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>Frontend</label>
                 <field id="loading_text" translate="label comment" type="text" sortOrder="8"
                     showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
@@ -107,7 +107,9 @@
                     <label>Load More threshold</label>
                     <comment>
                         <![CDATA[
-                        When this page number is reached, a button to load more products will be shown instead of continue loading products automatically with the scroll.<br/>
+                        When this page number is reached,
+                        a button to load more products will be shown instead of continue loading
+                        products automatically with the scroll.<br/>
                         This could be useful to help the user to reach the footer.<br/>
                         Use a high number to disable this feature.
                         ]]>
@@ -119,7 +121,8 @@
                     <comment>
                         <![CDATA[
                         Set an offset before page end from which the content will start to load.<br/>
-                        A high number will load the next page a long time before the user reaches the bottom of the screen.
+                        A high number will load the next page a long time before 
+                        the user reaches the bottom of the screen.
                         ]]>
                     </comment>
                 </field>

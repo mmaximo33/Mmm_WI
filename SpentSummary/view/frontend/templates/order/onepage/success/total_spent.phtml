@@ -4,32 +4,33 @@ $symbol = $block->getSymbolCurrency();
 $totalAmounts = $block->getCalculateTotals();
 ?>
 
-<?= $settingStyles ?>
+<?= /* @noEscape */$settingStyles ?>
 <div id='mmm-spentsummary' class='mmm-spentsummary'>
     <div>
-        <?= __('Detail amounts for account') ?>
-        (<?= $block->getEmailAddress() ?>)
+        <?= /* @noEscape */__('Detail amounts for account') ?>
+        (
+        <?= /* @noEscape */$block->getEmailAddress() ?>)
     </div>
     <ul>
         <li>
-            <?= __('totalOrders') ?>
-            <?= $symbol ?>
-            <?= $totalAmounts['totalOrders'] ?>
+            <?= /* @noEscape */__('totalOrders') ?>
+            <?= /* @noEscape */$symbol ?>
+            <?= /* @noEscape */$totalAmounts['totalOrders'] ?>
         </li>
         <li>
-            <?= __('totalInvoicedOrders') ?>
-            <?= $symbol ?>
-            <?= $totalAmounts['totalInvoicedOrders'] ?>
+            <?= /* @noEscape */__('totalInvoicedOrders') ?>
+            <?= /* @noEscape */$symbol ?>
+            <?= /* @noEscape */$totalAmounts['totalInvoicedOrders'] ?>
         </li>
         <li>
-            <?= __('totalCreditmemo') ?>
-            <?= $symbol ?>
-            <?= $totalAmounts['totalCreditmemo'] ?>
+            <?= /* @noEscape */__('totalCreditmemo') ?>
+            <?= /* @noEscape */$symbol ?>
+            <?= /* @noEscape */$totalAmounts['totalCreditmemo'] ?>
         </li>
         <li>
-            <?= __('totalSpent') ?>
-            <?= $symbol ?>
-            <?= $totalAmounts['totalSpent'] ?>
+            <?= /* @noEscape */__('totalSpent') ?>
+            <?= /* @noEscape */$symbol ?>
+            <?= /* @noEscape */$totalAmounts['totalSpent'] ?>
         </li>
     </ul>
 </div>

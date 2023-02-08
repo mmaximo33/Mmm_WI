@@ -7,7 +7,7 @@ use Magento\Sales\Api\OrderRepositoryInterface;
 use Magento\Sales\Model\Order\CreditmemoRepository;
 
 /**
- * Calculate total 
+ * Calculate total
  */
 class CalculateTotalSpent
 {
@@ -31,8 +31,7 @@ class CalculateTotalSpent
         OrderRepositoryInterface $orderRepository,
         CreditmemoRepository $creditmemoRepository,
         SearchCriteriaBuilder $searchCriteriaBuilder
-    )
-    {
+    ) {
         $this->orderRepository = $orderRepository;
         $this->creditmemoRepository = $creditmemoRepository;
         $this->searchCriteriaBuilder = $searchCriteriaBuilder;

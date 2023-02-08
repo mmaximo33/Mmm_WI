@@ -62,7 +62,12 @@
                 <field id="provider" translate="label comment" type="select" sortOrder="4"
                     showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Provider</label>
-                    <comment><![CDATA[We recommend <a href="open-meteo.com" target="_blank">open-meteo.com</a>, it is Free & OpenSource]]></comment>
+                    <comment>
+                        <![CDATA[
+                        We recommend <a href="open-meteo.com" target="_blank">open-meteo.com</a>,
+                        it is Free & OpenSource
+                        ]]>
+                    </comment>
                     <validate>required-entry provider-select provider-in-construction</validate>
                     <source_model>Mmm\Weather\Model\Configuration\Source\Providers</source_model>
                     <depends>

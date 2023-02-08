@@ -31,7 +31,7 @@ class Currency
 
     /**
      * Return current symbol for store
-     * 
+     *
      * @return string
      */
     public function getSymbol()

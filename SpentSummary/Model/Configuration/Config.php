@@ -18,14 +18,13 @@ class Config
     private $scopeConfig;
 
     /**
-     * Construct 
-     * 
+     * Construct
+     *
      * @param ScopeConfigInterface $scopeConfig
      */
     public function __construct(
         ScopeConfigInterface $scopeConfig
-    )
-    {
+    ) {
         $this->scopeConfig = $scopeConfig;
     }
 

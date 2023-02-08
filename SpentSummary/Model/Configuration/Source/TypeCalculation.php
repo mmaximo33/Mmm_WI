@@ -8,20 +8,20 @@ use \Magento\Framework\Data\OptionSourceInterface;
  */
 class TypeCalculation implements OptionSourceInterface
 {
-  const CAL_WITH_CREDITMEMO = "withcreditmemo";
-  const CAL_WITHOUT_CREDITMEMO = "withoutcreditmemo";
+    private const CAL_WITH_CREDITMEMO = "withcreditmemo";
+    private const CAL_WITHOUT_CREDITMEMO = "withoutcreditmemo";
 
   /**
-   * Options key,value 
-   * 
+   * Options key,value
+   *
    * @return array
    */
-  public function toOptionArray()
-  {
-    return [
-      ['value' => null, 'label' => __('--Type of calculation--  ')],
-      ['value' => self::CAL_WITH_CREDITMEMO, 'label' => __('With CreditMemo')],
-      ['value' => self::CAL_WITHOUT_CREDITMEMO, 'label' => __('Without Creditmemo')],
-    ];
-  }
+    public function toOptionArray()
+    {
+        return [
+        ['value' => null, 'label' => __('--Type of calculation--  ')],
+        ['value' => self::CAL_WITH_CREDITMEMO, 'label' => __('With CreditMemo')],
+        ['value' => self::CAL_WITHOUT_CREDITMEMO, 'label' => __('Without Creditmemo')],
+        ];
+    }
 }

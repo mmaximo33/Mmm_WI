@@ -6,11 +6,11 @@ $settingStyles = ($config->getStyles() === null) ? '' : $config->getStyles();
 
 $content = $block->getProduct()->getData('mmm_product_widget');
 ?> 
-<?= $settingStyles ?>
-<? if ($content) { ?>
+<?= /* @noEscape */ $settingStyles ?>
+<?php if ($content) { ?>
     <div class="mmm-productwidget-box">
         <p class="mmm-productwidget-text">
-            <?= $content ?>
+            <?= /* @noEscape */ $content ?>
         </p>
     </div> 
 <?php } ?>
