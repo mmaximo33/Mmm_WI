@@ -46,6 +46,7 @@
                         Default: 600
                         ]]>
                     </comment>
+                    <validate>required-entry</validate>
                 </field>
                 <field id="content" translate="label comment" type="text" sortOrder="3"
                     showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
@@ -56,6 +57,7 @@
                         Default: .main
                         ]]>
                     </comment>
+                    <validate>required-entry</validate>
                 </field>
                 <field id="pagination" translate="label comment" type="text" sortOrder="4"
                     showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
@@ -66,6 +68,7 @@
                         Default: .pages-items, .pager__list
                         ]]>
                     </comment>
+                    <validate>required-entry</validate>
                 </field>
                 <field id="next" translate="label comment" type="text" sortOrder="5"
                     showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
@@ -76,6 +79,7 @@
                         Defaul: .next
                         ]]>
                     </comment>
+                    <validate>required-entry</validate>
                 </field>
                 <field id="item" translate="label comment" type="text" sortOrder="6"
                     showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
@@ -86,6 +90,7 @@
                         Defaul: .product-item
                         ]]>
                     </comment>
+                    <validate>required-entry</validate>
                 </field>
                 <depends>
                     <field id="mmm_infinitescroll/settings/enable">1</field>
@@ -97,10 +102,12 @@
                 <field id="loading_text" translate="label comment" type="text" sortOrder="8"
                     showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Loading Text</label>
+                    <validate>required-entry</validate>
                 </field>
                 <field id="done_text" translate="label comment" type="text" sortOrder="9"
                     showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Done Text</label>
+                    <validate>required-entry</validate>
                 </field>
                 <field id="load_more" translate="label comment" type="text" sortOrder="70"
                     showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
@@ -114,6 +121,7 @@
                         Use a high number to disable this feature.
                         ]]>
                     </comment>
+                    <validate>required-entry</validate>
                 </field>
                 <field id="load_more_text" translate="label comment" type="text" sortOrder="80"
                     showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
@@ -125,6 +133,7 @@
                         the user reaches the bottom of the screen.
                         ]]>
                     </comment>
+                    <validate>required-entry</validate>
                 </field>
                 <depends>
                     <field id="mmm_infinitescroll/settings/enable">1</field>
