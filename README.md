@@ -2,17 +2,15 @@
 
 ## Table of Contents
 
-- [About](#about)
 - [Install](#install)
 - [Modules](#usage)
+  - [Value added](#value-added)
   - [Infinite Scroll](#infinite-scroll)
   - [Product Widget](#product-widget)
   - [Spent Summary](#spent-summary)
   - [Weather Widget](#weather-widget)
 
-
 ## Instalation
-
 
 Download this repository and add it in your project path
 it should be as follows
@@ -65,6 +63,33 @@ bin/magento setup:up;bin/magento s:d:c;bin/magento s:s:d -f;bin/magento c:f
 
 ### Modules
 -------------------------
+
+### Value added
+
+Beyond the initial requirement to make each of the solutions.
+Small implicits were added to the deliverables that generate value
+such as
+
+- More customizable settings.
+  - General
+    - coding-standard to all modules
+    - Translations
+    - Customize styles
+    - js validations in settings
+  - InfiniteScroll
+    - Customize time
+    - Indicate references or selectors to intervene
+    - Customize messages
+  - SpentSummary
+    - Contemplate Creditmemo
+    - Calculation by (Order, Invoice, Creditmemo, Spent)
+  - Weather
+    - Select providers
+    - Select data to display
+    - set speed
+
+-------------------------
+
 #### Infinite Scroll
 
 This module is in charge of adding the Infinite Scroll feature in the PDL of the store.
@@ -86,6 +111,7 @@ Here you will find the necessary settings to enable and customize this module.
 </a>
 
 -------------------------
+
 ### Weather Widget
 
 This module allows you to add a weather widget based on the location of the visitor.
@@ -112,6 +138,7 @@ After installing and enabling the module, the result is displayed as in the foll
 </a>
 
 -------------------------
+
 ### Spent Summary
 
 This module is responsible for calculating the total amount spent by a user according to their email.
@@ -123,6 +150,7 @@ You can find the configuration of the module from
 
 **Observation**
 In case you want to use this feature in a custom template from the backoffice, you can add the following code to make use of the feature
+
 ```
     {{block
         area="frontend"
@@ -147,6 +175,7 @@ After installing and enabling the module, the result is displayed as in the foll
 </a>
 
 -------------------------
+
 ### Product Widget
 
 This module adds a small widget to your store's PDP, where you can enter a small message and customize it as required.
