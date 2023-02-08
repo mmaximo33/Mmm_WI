@@ -1,16 +1,16 @@
 {
-    "name": "mmm/spentsummary",
+    "name": "mmm/productwidget",
     "version": "1.0.0",
     "license": "MIT",
     "type": "magento2-module",
     "homepage": "https://github.com/mmaximo33/",
-    "description": "MM Module - Spent Summary",
+    "description": "MM Module - Product Widget",
     "keywords": [
         "composer-installer",
         "Magento",
         "Module",
         "Magento 2",
-        "Spent Summay"
+        "Product Widget"
     ],
     "authors": [
         {
@@ -20,7 +20,9 @@
         }
     ],
     "require": {
-        "mmm/core": "^1.0"
+        "mmm/core": "^1.0",
+        "magento/module-eav": "102.*",
+        "magento/module-catalog": "104.*"
     },
     "autoload": {
         "psr-4": {

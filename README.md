@@ -56,7 +56,7 @@ Post installation settings repaired
 bin/magento module:disable Magento_Csp Magento_TwoFactorAuth
 bin/magento config:set admin/security/session_lifetime 31536000
 bin/magento config:set admin/security/use_form_key 0
-bin/magento s:d:c;bin/magento s:s:d -f;bin/magento setup:up;bin/magento c:f;bin/magento indexer:reindex
+bin/magento setup:up;bin/magento s:d:c;bin/magento s:s:d -f;bin/magento c:f;bin/magento indexer:reindex
 
 ```
 

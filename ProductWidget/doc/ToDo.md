@@ -1,0 +1,2 @@
+- Agregar configuracion para personalizar ubicacion.
+- Agregar switch modo modal

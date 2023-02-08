@@ -7,17 +7,21 @@
     "description": "MM Module - Weather Widget",
     "keywords": [
         "composer-installer",
-        "magento",
-        "weaters",
-        "Magento 2"
+        "Magento",
+        "Module",
+        "Magento 2",
+        "Weathers Widget"
     ],
     "authors": [
         {
-            "name": "Maximo Marucci"
+            "name": "Maximo Marucci",
+            "homepage": "https://www.linkedin.com/in/marucci-maximo/",
+            "role": "Analyst Developer Fullstack"
         }
     ],
     "require": {
-        "mmm/core": "^1.0"
+        "mmm/core": "^1.0",
+        "magento/module-ui": "101.*"
     },
     "autoload": {
         "psr-4": {
