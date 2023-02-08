@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="mmm_infinitescroll" translate="label" sortOrder="1" showInDefault="1"
+            showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Infinites Scroll</label>
+            <tab>mmm</tab>
+            <resource>Mmm_InfiniteScroll::settings</resource>
+            <group id="settings" translate="label comment" type="text" sortOrder="1"
+                showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Settings</label>
+                <field id="info" translate="label comment" type="hidden" sortOrder="1"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Information</label>
+                    <comment><![CDATA[<strong style="color:red">Warning!</strong><br/>
+                        To see the changes made to the frontend of your site. remember to
+                        <ul>
+                            <li>Cache flush <b>full_page</b></li>
+                            <li>Menu > System > Tools > Cache Management</li>
+                        </ul>
+                        <ul>
+                            In all fields where reference is requested
+                            <li>You must enter: .classname or #id</b></li>
+                            <li>Default: It is the reference of the LUMA theme</li>
+                        </ul>
+                        ]]>
+                    </comment>
+                </field>
+                <field id="enable" translate="label comment" type="select" sortOrder="1"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Feature Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="settings_behavior" translate="label comment" type="text" sortOrder="2"
+                showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Behavior</label>
+                <field id="delay" translate="label comment" type="text" sortOrder="2"
+                    showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Delay (ms)</label>
+                    <comment>
+                        <![CDATA[
+                        Delay value for scroll down.<br/>
+                        Default: 600
+                        ]]>
+                    </comment>
+                </field>
+                <field id="content" translate="label comment" type="text" sortOrder="3"
+                    showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Content</label>
+                    <comment>
+                        <![CDATA[
+                        Reference of the container element of the items to be loaded.<br/>
+                        Default: .main
+                        ]]>
+                    </comment>
+                </field>
+                <field id="pagination" translate="label comment" type="text" sortOrder="4"
+                    showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Pagination</label>
+                    <comment>
+                        <![CDATA[
+                        Reference for the pagination element.<br/>
+                        Default: .pages-items, .pager__list
+                        ]]>
+                    </comment>
+                </field>
+                <field id="next" translate="label comment" type="text" sortOrder="5"
+                    showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Next</label>
+                    <comment>
+                        <![CDATA[
+                        Reference for the link to the next page.<br/>
+                        Defaul: .next
+                        ]]>
+                    </comment>
+                </field>
+                <field id="item" translate="label comment" type="text" sortOrder="6"
+                    showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Item</label>
+                    <comment>
+                        <![CDATA[
+                        Reference the items to receive.<br/>
+                        Defaul: .product-item
+                        ]]>
+                    </comment>
+                </field>
+                <depends>
+                    <field id="mmm_infinitescroll/settings/enable">1</field>
+                </depends>
+            </group>
+            <group id="settings_frontend" translate="label comment" type="text" sortOrder="2"
+            showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Frontend</label>
+                <field id="loading_text" translate="label comment" type="text" sortOrder="8"
+                    showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Loading Text</label>
+                </field>
+                <field id="done_text" translate="label comment" type="text" sortOrder="9"
+                    showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Done Text</label>
+                </field>
+                <field id="load_more" translate="label comment" type="text" sortOrder="70"
+                    showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Load More threshold</label>
+                    <comment>
+                        <![CDATA[
+                        When this page number is reached, a button to load more products will be shown instead of continue loading products automatically with the scroll.<br/>
+                        This could be useful to help the user to reach the footer.<br/>
+                        Use a high number to disable this feature.
+                        ]]>
+                    </comment>
+                </field>
+                <field id="load_more_text" translate="label comment" type="text" sortOrder="80"
+                    showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Load More button text</label>
+                    <comment>
+                        <![CDATA[
+                        Set an offset before page end from which the content will start to load.<br/>
+                        A high number will load the next page a long time before the user reaches the bottom of the screen.
+                        ]]>
+                    </comment>
+                </field>
+                <depends>
+                    <field id="mmm_infinitescroll/settings/enable">1</field>
+                </depends>
+            </group>
+        </section>
+    </system>
+</config>

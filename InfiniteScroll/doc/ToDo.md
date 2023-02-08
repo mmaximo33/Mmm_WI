@@ -1,0 +1,3 @@
+- Agregar a la configuracion posibilidad de personalizar imagen gif loading.
+- Agregar configuracion para traer default itemPerPage, y personalizarlo (Source return value and ObserverSaveConfig)
+- Agrregar setting para ocultar paginacion

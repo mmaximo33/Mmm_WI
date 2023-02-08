@@ -1,0 +1,36 @@
+{
+    "name": "mmm/infinitescroll",
+    "version": "1.0.0",
+    "license": "MIT",
+    "type": "magento2-module",
+    "homepage": "https://github.com/mmaximo33/",
+    "description": "MM Module - Infinite Scroll",
+    "keywords": [
+        "composer-installer",
+        "Magento",
+        "Module",
+        "Magento 2",
+        "Infinite Scroll"
+    ],
+    "authors": [
+        {
+            "name": "Maximo Marucci",
+            "homepage": "https://www.linkedin.com/in/marucci-maximo/",
+            "role": "Analyst Developer Fullstack"
+        }
+    ],
+    "require": {
+        "mmm/core": "^1.0",
+        "magento/module-catalog": "104.*",
+        "magento/module-catalog-search": "102.*",
+        "magento/module-layered-navigation": "100.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mmm\\SpentSummary\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
