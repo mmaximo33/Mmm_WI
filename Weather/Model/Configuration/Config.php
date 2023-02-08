@@ -10,6 +10,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
  */
 class Config
 {
+    private const SETTING_ENABLE = 'mmm_weather/settings/enable';
     private const SETTING_APIKEY = 'mmm_weather/settings/apikey';
     private const SETTING_PROVIDER = 'mmm_weather/settings/provider';
     private const SETTING_STYLES = 'mmm_weather/settings/styles';
@@ -30,6 +31,19 @@ class Config
         $this->scopeConfig = $scopeConfig;
     }
 
+    /**
+     * Get Enable/Disable
+     *
+     * @return null|string
+     */
+    public function getEnable()
+    {
+        return $this->scopeConfig->getValue(
+            self::SETTING_ENABLE,
+            ScopeInterface::SCOPE_STORE
+        );
+    }
+    
     /**
      * Get API key
      *

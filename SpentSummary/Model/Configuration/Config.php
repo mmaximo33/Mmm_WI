@@ -9,6 +9,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
  */
 class Config
 {
+    private const SETTING_ENABLE = "mmm_spentsummary/settings/enable";
     private const SETTING_CALCULATE = "mmm_spentsummary/settings/calculate";
     private const SETTING_STYLES_FRONTEND = "mmm_spentsummary/settings/styles_frontend";
     private const SETTING_STYLES_EMAIL = "mmm_spentsummary/settings/styles_email";
@@ -26,6 +27,19 @@ class Config
     )
     {
         $this->scopeConfig = $scopeConfig;
+    }
+
+    /**
+     * Get Enable/Disable
+     *
+     * @return null|string
+     */
+    public function getEnable()
+    {
+        return $this->scopeConfig->getValue(
+            self::SETTING_ENABLE,
+            ScopeInterface::SCOPE_STORE
+        );
     }
 
     /**

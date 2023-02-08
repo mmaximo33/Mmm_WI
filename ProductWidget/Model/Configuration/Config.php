@@ -9,6 +9,8 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
  */
 class Config
 {
+
+    private const SETTING_ENABLE = "mmm_productwidget/settings/enable";
     private const SETTING_STYLES = "mmm_productwidget/settings/styles";
 
     /** @var ScopeConfigInterface */
@@ -26,6 +28,19 @@ class Config
         $this->scopeConfig = $scopeConfig;
     }
 
+    /**
+     * Get Enable/Disable
+     *
+     * @return null|string
+     */
+    public function getEnable()
+    {
+        return $this->scopeConfig->getValue(
+            self::SETTING_ENABLE,
+            ScopeInterface::SCOPE_STORE
+        );
+    }
+    
     /**
      * Get custom styles
      *
