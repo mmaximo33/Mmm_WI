@@ -12,12 +12,17 @@
                 showInDefault="1"
                 showInWebsite="0" showInStore="0">
                 <label>Settings</label>
-                <comment><![CDATA[<strong style="color:red">Warning!</strong><br/>
-                    To see the changes made to the frontend of your site. remember to
-                    <ul>
-                        <li>Cache flush <b>full_page</b></li>
-                        <li>Menu > System > Tools > Cache Management</li>
-                    </ul> ]]></comment>
+                <field id="info" translate="label comment" type="hidden" sortOrder="1"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Information</label>
+                    <comment><![CDATA[<strong style="color:red">Warning!</strong><br/>
+                        To see the changes made to the frontend of your site. remember to
+                        <ul>
+                            <li>Cache flush <b>full_page</b></li>
+                            <li>Menu > System > Tools > Cache Management</li>
+                        </ul> ]]>
+                    </comment>
+                </field>
                 <field id="enable" translate="label comment" type="select" sortOrder="1"
                     showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Feature Enable</label>
@@ -26,11 +31,13 @@
                 <field id="speed" translate="label comment" type="text" sortOrder="2"
                     showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Speed</label>
-                    <comment><![CDATA[
+                    <comment>
+                        <![CDATA[
                         <ul>
                             <li>Default the speed is set to <b>60</b></li>
                             <li>Range [1-100]</li>
-                        </ul>]]></comment>
+                        </ul>]]>
+                    </comment>
                     <validate>validate-number range-speed</validate>
                     <depends>
                         <field id="mmm_weather/settings/enable">1</field>
@@ -39,13 +46,15 @@
                 <field id="styles" translate="label comment" type="textarea" sortOrder="3"
                     showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Custom CSS</label>
-                    <comment><![CDATA[You can adjust the styles using the classes. example:<br>
-                    &lt;style&gt;<br/>
-                        .mmm-weather-widget { background-color: red }<br/> 
-                        .mmm-weather-location {}<br/>
-                        .mmm-weather-message {}<br>
-                        .mmm-weather-point {}<br/>
-                    &lt;/style&gt;]]></comment>
+                    <comment>
+                        <![CDATA[You can adjust the styles using the classes. example:<br>
+                        &lt;style&gt;<br/>
+                            .mmm-weather-widget { background-color: red }<br/> 
+                            .mmm-weather-location {}<br/>
+                            .mmm-weather-message {}<br>
+                            .mmm-weather-point {}<br/>
+                        &lt;/style&gt;]]>
+                    </comment>
                     <depends>
                         <field id="mmm_weather/settings/enable">1</field>
                     </depends>
@@ -64,7 +73,9 @@
                     sortOrder="100"
                     showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Options Show</label>
-                    <comment><![CDATA[These data will be displayed in the homepage widget.]]></comment>
+                    <comment>
+                        <![CDATA[These data will be displayed in the homepage widget.]]>
+                    </comment>
                     <source_model>Mmm\Weather\Model\Configuration\Source\Options</source_model>
                     <depends>
                         <field id="mmm_weather/settings/enable">1</field>
@@ -75,7 +86,12 @@
                     sortOrder="200"
                     showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>API key</label>
-                    <comment><![CDATA[To see the apikey of your account <a href="https://home.openweathermap.org/api_keys" target="_blank">click here</a>]]></comment>
+                    <comment>
+                        <![CDATA[
+                        To see the apikey of your account
+                        <a href="https://home.openweathermap.org/api_keys" target="_blank">click here</a>
+                        ]]>
+                    </comment>
                     <validate>required-entry openweathermap-apikey</validate>
                     <depends>
                         <field id="mmm_weather/settings/enable">1</field>

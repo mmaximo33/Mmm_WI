@@ -12,12 +12,19 @@
                 showInDefault="1"
                 showInWebsite="0" showInStore="0">
                 <label>Settings</label>
-                <comment><![CDATA[<strong style="color:red">Warning!</strong><br/>
-                    To see the changes made to the frontend of your site. remember to
-                    <ul>
-                        <li>Cache flush <b>full_page</b></li>
-                        <li>Menu > System > Tools > Cache Management</li>
-                    </ul> ]]></comment>
+                <field id="info" translate="label comment" type="hidden" sortOrder="1"
+                    showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Information</label>
+                    <comment>
+                        <![CDATA[<strong style="color:red">Warning!</strong><br/>
+                        To see the changes made to the frontend of your site. remember to
+                        <ul>
+                            <li>Cache flush <b>full_page</b></li>
+                            <li>Menu > System > Tools > Cache Management</li>
+                        </ul> 
+                        ]]>
+                    </comment>
+                </field>
                 <field id="enable" translate="label comment" type="select" sortOrder="1"
                     showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Feature Enable</label>
@@ -26,11 +33,15 @@
                 <field id="calculate" translate="label comment" type="select" sortOrder="1"
                     showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Calculate Type</label>
-                    <comment><![CDATA[<strong style="color:red">Warning!</strong> You can calculate the total spent by the customer in the following ways<br/>
+                    <comment>
+                        <![CDATA[
+                        <strong style="color:red">Warning!</strong>
+                        You can calculate the total spent by the customer in the following ways<br/>
                         <ul>
                             <li>Total invoice</li>
                             <li>Total invoice - Total Creditmemo</li>
-                        </ul>]]></comment>
+                        </ul>]]>
+                    </comment>
                     <validate>required-entry</validate>
                     <source_model>Mmm\SpentSummary\Model\Configuration\Source\TypeCalculation</source_model>
                     <depends>
@@ -41,9 +52,10 @@
                     showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Custom CSS (Frontend)</label>
                     <comment><![CDATA[You can adjust the styles using the classes. example:<br>
-                    &lt;style&gt;<br/>
-                        .mmm-spentsummary { background-color: red }<br/> 
-                    &lt;/style&gt;]]></comment>
+                        &lt;style&gt;<br/>
+                            .mmm-spentsummary { background-color: red }<br/> 
+                        &lt;/style&gt;]]>
+                    </comment>
                     <depends>
                         <field id="mmm_spentsummary/settings/enable">1</field>
                     </depends>
@@ -52,9 +64,10 @@
                     showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Custom CSS (Email)</label>
                     <comment><![CDATA[You can adjust the styles using the classes. example:<br>
-                    &lt;style&gt;<br/>
-                        .mmm-spentsummary { background-color: red }<br/> 
-                    &lt;/style&gt;]]></comment>
+                        &lt;style&gt;<br/>
+                            .mmm-spentsummary { background-color: red }<br/> 
+                        &lt;/style&gt;]]>
+                    </comment>
                     <depends>
                         <field id="mmm_spentsummary/settings/enable">1</field>
                     </depends>
